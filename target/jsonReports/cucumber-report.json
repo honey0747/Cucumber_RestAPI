@@ -1,0 +1,114 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-13T04:32:05.890Z",
+        "before": [
+          {
+            "result": {
+              "duration": 27766096392,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.addPlaceHook()"
+            }
+          }
+        ],
+        "line": 40,
+        "name": "Delete Address and validate response",
+        "description": "",
+        "id": "addressapi;delete-address-and-validate-response",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8098909,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "Delete place payload",
+            "match": {
+              "location": "APIStepDefinition.delete_place_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2288861480,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "call \"DeletePlaecAPI\" with \"Post\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeletePlaecAPI\"",
+                  "offset": 5
+                },
+                {
+                  "val": "\"Post\"",
+                  "offset": 27
+                }
+              ],
+              "location": "APIStepDefinition.call_with_http_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 447961,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "Api call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "APIStepDefinition.api_call_got_success_with_status_code(Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 41081360,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "\"status\" field value in response is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 36
+                }
+              ],
+              "location": "APIStepDefinition.field_value_in_response_is(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace_UsingHooks"
+          }
+        ]
+      }
+    ],
+    "name": "AddressAPI",
+    "description": "",
+    "id": "addressapi",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/AddressAPI.feature",
+    "tags": []
+  }
+]
