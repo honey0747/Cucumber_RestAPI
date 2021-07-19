@@ -18,7 +18,7 @@ import enum_Resources.APIResources;
 
 
 public class APIStepDefinition extends Utilities{
-	//declaring vars
+	//declaring vars in enhancerestAPI Branch
 	RequestSpecification reqSP;
 	ResponseSpecification resSP;
 	RequestSpecification rq;
